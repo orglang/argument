@@ -70,4 +70,4 @@ func DoSomeWork() WorkOutcome {
 
 ---
 
-[^1] Luis Caires and Frank Pfenning. 2010. Session Types as Intuitionistic Linear Propositions.  
+[^1]: Luis Caires and Frank Pfenning. 2010. Session Types as Intuitionistic Linear Propositions.  
