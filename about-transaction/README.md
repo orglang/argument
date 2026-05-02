@@ -109,12 +109,12 @@ func DoSomeWork() WorkOutcome {
 Ключевой операцией языка является подача значения в продолжение, в результате которой образуется пул. Продолжение предоставляет терм пула (либо выбор между несколькими термами) со связанными переменными в рамках него, и значение может как выбрать подходящий терм пула, так и предоставить идентификатор канала для подстановки.
 
 Будем записывать данную операцию как *V*&nbsp;&nbsp;▷&nbsp;&nbsp;*K* и определим её следующим образом:  
-⟨⟩⠀▷⠀(⟨⟩ ⇒ *P*)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀≜⠀P  
-shift(*c*<sub>*𝚔*</sub>)⠀▷⠀(shift(*x*<sub>*𝚔*</sub>) ⇒ *P*)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ≜⠀*P*[*c*<sub>*𝚔*&nbsp;</sub>/*x*<sub>*𝚔*&nbsp;</sub>]  
-choice(*c*){*𝚕*}⠀▷⠀(choice(*x*<sub>*𝚓*</sub>){*𝚓*} ⇒ *P*<sub>*𝚓*</sub>)<sub>*𝚓* ∈ *𝙹*</sub>⠀⠀≜⠀*P*<sub>*𝚕*&nbsp;</sub>[*c*/*x*<sub>*𝚕*</sub>]  
-coop(*c*){*q*<sub>*𝚠*&nbsp;</sub>}⠀▷⠀(coop(*x*){*q*<sub>*𝚠*&nbsp;</sub>} ⇒ *P* : *T*&nbsp;)⠀⠀⠀⠀ ≜⠀*P*[*c*/*x*] : [*Q* + {*q*<sub>*𝚠*&nbsp;</sub>}]*T*  
-isol(*c*){*q*<sub>*𝚠*&nbsp;</sub>}⠀▷⠀(isol(*x*){*q*<sub>*𝚠*&nbsp;</sub>} ⇒ *P* : *T*&nbsp;)⠀⠀⠀⠀⠀ ⠀≜⠀*P*[*c*/*x*] : [*Q* - {*q*<sub>*𝚠*&nbsp;</sub>}]*T*  
-call(*c*){*a* ← *q* *b*<sub>1</sub>...*b*<sub>*𝚗*&nbsp;</sub>}⠀▷⠀(spawn(*x*) {*q*} ⇒ *P*)⠀≜⠀*P*[*c*/*x*]  
-spawn(*c*){*q*}⠀▷⠀(call(*x*){*a* ← *q* *b*<sub>1</sub>...*b*<sub>*𝚗* </sub>} ⇒ *P*)⠀ ≜⠀*P*[*c*/*x*]  
+> ⟨⟩⠀▷⠀(⟨⟩ ⇒ *P*)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀≜⠀P  
+> shift(*c*<sub>*𝚔*</sub>)⠀▷⠀(shift(*x*<sub>*𝚔*</sub>) ⇒ *P*)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ≜⠀*P*[*c*<sub>*𝚔*&nbsp;</sub>/*x*<sub>*𝚔*&nbsp;</sub>]  
+> choice(*c*){*𝚕*}⠀▷⠀(choice(*x*<sub>*𝚓*</sub>){*𝚓*} ⇒ *P*<sub>*𝚓*</sub>)<sub>*𝚓* ∈ *𝙹*</sub>⠀⠀≜⠀*P*<sub>*𝚕*&nbsp;</sub>[*c*/*x*<sub>*𝚕*</sub>]  
+> coop(*c*){*q*<sub>*𝚠*&nbsp;</sub>}⠀▷⠀(coop(*x*){*q*<sub>*𝚠*&nbsp;</sub>} ⇒ *P* : *T*&nbsp;)⠀⠀⠀⠀ ≜⠀*P*[*c*/*x*] : [*Q* + {*q*<sub>*𝚠*&nbsp;</sub>}]*T*  
+> isol(*c*){*q*<sub>*𝚠*&nbsp;</sub>}⠀▷⠀(isol(*x*){*q*<sub>*𝚠*&nbsp;</sub>} ⇒ *P* : *T*&nbsp;)⠀⠀⠀⠀⠀ ⠀≜⠀*P*[*c*/*x*] : [*Q* - {*q*<sub>*𝚠*&nbsp;</sub>}]*T*  
+> call(*c*){*a* ← *q* *b*<sub>1</sub>...*b*<sub>*𝚗*&nbsp;</sub>}⠀▷⠀(spawn(*x*) {*q*} ⇒ *P*)⠀≜⠀*P*[*c*/*x*]  
+> spawn(*c*){*q*}⠀▷⠀(call(*x*){*a* ← *q* *b*<sub>1</sub>...*b*<sub>*𝚗* </sub>} ⇒ *P*)⠀ ≜⠀*P*[*c*/*x*]  
 
 [^1]: Luis Caires and Frank Pfenning. 2010. Session Types as Intuitionistic Linear Propositions.  
